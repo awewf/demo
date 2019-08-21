@@ -19,7 +19,6 @@ import java.util.Set;
 @SpringBootTest
 @Slf4j
 public class DemoApplicationTests {
-
 	@Autowired
 	private UserService userService;
 
@@ -46,6 +45,12 @@ public class DemoApplicationTests {
 		//保存字符串
 		stringRedisTemplate.opsForValue().set("aaa","111");
 		System.out.println(stringRedisTemplate.opsForValue().get("aaa"));
+		log.info("info");
+		log.warn("warm");
+		log.error("error");
+
+		log.debug("debug");
+		log.trace("trace");
 	}
 
 	@Test
