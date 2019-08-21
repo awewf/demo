@@ -54,6 +54,7 @@ public class DemoApplicationTests {
 	}
 
 	@Test
+	@SuppressWarnings("unchecked")
 	public void testRedisForSaveCharacter(){
 		User user = new User();
 		user.setId(1);
@@ -66,7 +67,7 @@ public class DemoApplicationTests {
 		System.out.println(redisTemplate.opsForValue().get("user_1"));
 	}
 
-	/**  Redis操作List   BEGIN  **/
+	/* Redis操作List   BEGIN  */
 	// list数据类型适合于消息队列的场景:比如12306并发量太高，而同一时间段内只能处理指定数量的数据！必须满足先进先出的原则，其余数据处于等待
 	@Test
 	public void testRedisForListPush(){
@@ -109,10 +110,10 @@ public class DemoApplicationTests {
 		this.testRedisForListGet();
 	}
 
-	/**  Redis操作List   END **/
+	/*  Redis操作List   END */
 
 
-	/**  Redis操作Hash   BEGIN  **/
+	/*  Redis操作Hash   BEGIN  */
 	@Test
 	public void testRedisForHashPut(){
 		// map的key值相同，后添加的覆盖原有的
@@ -160,5 +161,5 @@ public class DemoApplicationTests {
 		log.info("size:{}", size);
 	}
 
-	/**  Redis操作Hash   END **/
+	/*  Redis操作Hash   END */
 }
