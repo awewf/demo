@@ -14,7 +14,7 @@ spring:
     host: 127.0.0.1
     port: 6379
     # 有密码填密码，没有密码不填
-    password: 123456
+    password:
     # 连接超时时间（ms)
     timeout: 1000ms
     # 高版本springboot中使用jedis或者lettuce

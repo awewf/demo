@@ -40,6 +40,12 @@ public class DemoApplicationTests {
 	}
 
 	@Test
+	public void getR(){
+		//redisTemplate.opsForValue().set("REDIS_KEY_TOKEN","REDIS_KEY_TOKEN");
+		System.out.println(this.redisTemplate.opsForValue().get("REDIS_KEY_TOKEN"));
+	}
+
+	@Test
 	public void testRedisForSaveString(){
 
 		//保存字符串
